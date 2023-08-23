@@ -10,5 +10,9 @@ class battle_npc:
 
     def command(self, command: str):
         candidate_labels = ["Attack", "Follow Me", "Fallback"]
-        label = classifier(command, candidate_labels)
+        action = classifier(command, candidate_labels)
+        labels = action['labels']
+        scores = action['scores']
+        max_score_index = scores.index(max(scores))
+        label = labels[max_score_index]     
         return label
