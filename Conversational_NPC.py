@@ -1,3 +1,8 @@
+# Text Generation for Conversational NPCs, based on character backgrounds.
+
+import langchain
+import huggingface_hub
+
 class Character:
     
     def __init__(self, ethnicity: str, age: int, gender: str,
@@ -20,6 +25,10 @@ class Character:
 
     def update_knowledge(self, fiction_update):
         self.world_knowledge = self.world_knowledge + " " + fiction_update
+
+    def response(self, conversation):
+
+
         
 
 # Example Usage

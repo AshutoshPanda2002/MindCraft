@@ -1,3 +1,5 @@
+# Zero-Shot Text Classification for Battle NPC Commands.
+
 # Importing the pipeline function from the transformers library
 from transformers import pipeline
 
@@ -27,7 +29,6 @@ class battle_npc:
         # Returning the label with the maximum score
         return label
     
-
 # Example Usage
 
 # from Battle_NPC import battle_npc
