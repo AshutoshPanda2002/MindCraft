@@ -10,4 +10,5 @@ class battle_npc:
 
     def command(self, command: str):
         candidate_labels = ["Attack", "Follow Me", "Fallback"]
-        classifier(command, candidate_labels)
+        label = classifier(command, candidate_labels)
+        return label
